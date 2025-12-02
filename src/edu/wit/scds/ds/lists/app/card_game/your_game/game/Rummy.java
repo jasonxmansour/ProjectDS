@@ -79,7 +79,7 @@ import java.util.Scanner ;
  *
  * @version 3.0 2025-11-30 modifications for Rummy implementation
  */
-public final class rummy
+public final class Rummy
     {
 
     /*
@@ -131,7 +131,7 @@ public final class rummy
      * @param input
      * used for player interactions
      */
-    private rummy( final Scanner input )
+    private Rummy( final Scanner input )
         {
 
         this.running = false ;
@@ -174,7 +174,7 @@ public final class rummy
 
         try ( final Scanner input = new Scanner( System.in ) ; )
             {
-            final rummy yourGame = new rummy( input ) ;
+            final Rummy yourGame = new Rummy( input ) ;
 
             welcome() ;
 
