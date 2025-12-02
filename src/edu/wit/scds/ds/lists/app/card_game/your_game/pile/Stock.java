@@ -58,7 +58,7 @@ import static edu.wit.scds.ds.lists.app.card_game.universal_base.support.Orienta
  *     <li>add constructor that provides source cards
  *     </ul>
  *
- * @author Your Name
+ * @author Jason Mansour and Michael Foley
  *
  * @version 3.0 2025-11-03 Initial implementation
  */

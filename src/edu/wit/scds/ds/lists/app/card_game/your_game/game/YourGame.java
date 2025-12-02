@@ -64,7 +64,7 @@ import java.util.Scanner ;
  * <li>Use 1 deck for 3-4 players, 2 decks for 5 players.
  * <li>Players are dealt 7 cards (3-4 players) or 6 cards (5 players).
  * <li>Players draw from Stock or Discard, Meld valid sets/runs, and Discard.
- * <li>Players can lay off cards on existing melds using 'a [cardIdx] [meldIdx]'.
+ * <li>Players can lay off cards on existing melds.
  * <li>The round ends when a player empties their hand.
  * </ul>
  *
@@ -211,7 +211,6 @@ public final class YourGame
                 }
             }
 
-            // Play one full round (Deal -> Turns -> End)
             run(); 
             
             // Check if user quit during run()
@@ -320,11 +319,20 @@ public final class YourGame
                 {
                 return ;
                 }
-
+            
+            if ( this.numberOfPlayers < MINIMUM_PLAYER_COUNT )
+                {
+                System.out.printf( "That is not enough players. Rummy requires at least %d.%n", MINIMUM_PLAYER_COUNT ) ;
+                }
+            else if ( this.numberOfPlayers > 5 )
+                {
+                System.out.printf( "That is too many players. The maximum is 5.%n" ) ;
+                }
             }
-        while ( this.numberOfPlayers < MINIMUM_PLAYER_COUNT || this.numberOfPlayers > 5 ) ;
+        while ( this.numberOfPlayers < MINIMUM_PLAYER_COUNT || this.numberOfPlayers > 5  ) ;
 
         // create the players
+        
 
         for ( int i = 1 ; i <= this.numberOfPlayers ; i++ )
             {
@@ -477,42 +485,63 @@ public final class YourGame
             System.out.printf("%n--- %s's Turn ---%n", currentPlayer.name);
             displayHandWithIndices(currentPlayer);
 
-            // 2. DRAW PHASE
-            String drawChoice = promptForLine("Draw from (S)tock or (D)iscard?");
-            if (!this.running) return;
-            
+            // 2. The draw portion
             Card drawnCard = null;
-            if (drawChoice.equalsIgnoreCase("D") && !discardPile.isEmpty()) {
-                drawnCard = discardPile.takeTopCard(); // Already revealed
-            } else {
-                // Default to stock
-                if (stock.isEmpty()) {
-                    // Reshuffle discard into stock if empty
-                    if (discardPile.isEmpty()) {
-                        System.out.println("Draw game: No cards left.");
-                        roundOver = true;
-                        break;
+            boolean validDraw = false;
+            
+            // fixed so now if you put something other than s or d its an error
+            while (!validDraw && this.running) {
+                String drawChoice = promptForLine("Draw from (S)tock or (D)iscard?");
+                if (!this.running) return;
+                
+                if (drawChoice.equalsIgnoreCase("S")) {
+                    // now this is where all the stock logic is 
+                    if (stock.isEmpty()) {
+                        // Reshuffle discard into stock if empty
+                        if (discardPile.isEmpty()) {
+                            System.out.println("Draw game: No cards left.");
+                            roundOver = true;
+                            validDraw = true; // Break loop to exit round
+                            break;
+                        }
+                        Card topDiscard = discardPile.takeTopCard();
+                        stock.moveCardsToBottom(discardPile); // Move rest
+                        stock.shuffle();
+                        discardPile.addCard(topDiscard); // Put top back
+                        System.out.println("Stock replenished from discard pile.");
                     }
-                    Card topDiscard = discardPile.takeTopCard();
-                    stock.moveCardsToBottom(discardPile); // Move rest
-                    stock.shuffle();
-                    discardPile.addCard(topDiscard); // Put top back
-                    System.out.println("Stock replenished from discard pile.");
+                    if (!stock.isEmpty()) {
+                        drawnCard = stock.drawTopCard().reveal();
+                        validDraw = true;
+                    }
+                } else if (drawChoice.equalsIgnoreCase("D")) {
+                    // right here is the discard logic
+                    if (discardPile.isEmpty()) {
+                        System.out.println("Discard pile is empty. You must draw from Stock.");
+                    } else {
+                        drawnCard = discardPile.takeTopCard(); // Already revealed
+                        validDraw = true;
+                    }
+                } else {
+                    // INVALID INPUT
+                    System.out.println("Invalid selection. Please type 'S' or 'D'.");
                 }
-                drawnCard = stock.drawTopCard().reveal();
             }
+            
+            // Check if round ended due to no cards
+            if (roundOver) break;
             
             System.out.println("You drew: " + drawnCard);
             currentPlayer.dealtACard(drawnCard);
             
-            // 3. MELD PHASE (Loop)
+            // 3. The melding portion
             boolean melding = true;
             while (melding && !currentPlayer.isHandEmpty() && this.running) {
                 // Refresh display after draw/meld to show updated hand
                 displayHandWithIndices(currentPlayer);
                 System.out.println("Meld Options:");
-                System.out.println(" - Enter indices for NEW meld (e.g. '0 1 2')");
-                System.out.println(" - Enter 'a <cardIdx> <meldIdx>' to ADD to existing (e.g. 'a 4 0')");
+                System.out.println(" - Enter indices for NEW meld (ex. '0 1 2')");
+                System.out.println(" - Enter 'add' character and meld index to ADD to existing meld (ex. 'a 4 0')");
                 System.out.println(" - Enter 'pass' to finish");
                 
                 String meldInput = promptForLine("Choice:");
@@ -521,7 +550,7 @@ public final class YourGame
                 if (meldInput.equalsIgnoreCase("pass") || meldInput.isEmpty()) {
                     melding = false;
                 } 
-                // --- LOGIC FOR ADDING TO EXISTING MELD ---
+                // bug fix: making this so you can actually add to existing meld 
                 else if (meldInput.toLowerCase().startsWith("a")) {
                     try {
                         String[] parts = meldInput.split(" ");
@@ -539,8 +568,6 @@ public final class YourGame
                             if (canAddToMeld(cardToPlay, targetMeld)) {
                                 // Move the card
                                 targetMeld.addToBottom(currentPlayer.playCardAt(cardIdx));
-                                // Re-sort runs for readability
-                                // FIX: CAST TO CARD TO ACCESS RANK
                                 if (((Card) targetMeld.getCardAt(0)).rank != ((Card) targetMeld.getCardAt(1)).rank) {
                                     targetMeld.sort(); 
                                 }
@@ -555,7 +582,7 @@ public final class YourGame
                         System.out.println("Invalid format. Use 'a <card> <meld>'");
                     }
                 } 
-                // --- LOGIC FOR NEW MELD ---
+                // this portion is for making a new meld that is not existing
                 else {
                     List<Integer> indices = parseIndices(meldInput, currentPlayer.getHand().cardCount());
                     if (indices.size() >= 3) {
@@ -570,7 +597,6 @@ public final class YourGame
                         }
                         
                         if (isValidMeld(candidates)) {
-                            // Valid! Remove them now.
                             Meld newMeld = new Meld();
                             for (int idx : indices) {
                                 newMeld.addToBottom(currentPlayer.playCardAt(idx));
@@ -586,7 +612,8 @@ public final class YourGame
                 }
             }
             
-            // 4. DISCARD PHASE
+            // 4. Phase where you can discard 
+            // have to make this so it doesn't end until pass
             if (!currentPlayer.isHandEmpty() && this.running) {
                 displayHandWithIndices(currentPlayer);
                 int discardIdx = -1;
@@ -600,7 +627,7 @@ public final class YourGame
                 System.out.println("Discarded " + discarded);
             }
             
-            // 5. CHECK WIN CONDITION
+            // 5. final win condition
             if (currentPlayer.isHandEmpty()) {
                 System.out.printf("%n%s went out! Round Over.%n", currentPlayer.name);
                 calculateRoundScores(currentPlayer);
@@ -739,12 +766,12 @@ public final class YourGame
      * utility methods
      */
     
-    // --- RUMMY SPECIFIC HELPERS ---
+    // rummy specific
     
-    // Updated helper to show Table Melds with INDICES
+    // Updated helper to show Table Melds with indices
     private void displayHandWithIndices( final Player p )
         {
-        // 1. Show Melds on Table
+        // Show Melds on Table
         System.out.println( "--- Melds on Table ---" ) ;
         List<Meld> allMelds = getAllMeldsOnTable();
         
@@ -762,13 +789,13 @@ public final class YourGame
             }
         }
 
-        // 2. Show Discard Pile
+        // Show Discard Pile
         System.out.printf( "%nDiscard Pile Top: %s%n",
                            this.discardPile.isEmpty()
                                    ? "[Empty]"
                                    : this.discardPile.getTopCard() ) ;
 
-        // 3. Show Player's Hand
+        // Show Player's Hand
         System.out.println( "Your Hand:" ) ;
         p.getHand().revealAll() ;
         int i = 0 ;
@@ -817,7 +844,7 @@ public final class YourGame
             cards.add( (Card) c ) ;
             }
 
-        // 1. Check if it's a SET (All ranks matches)
+        // Check if it's a SET which happens if all ranks matches
         boolean isSet = true ;
         Rank firstRank = cards.get( 0 ).rank ;
         for ( Card c : cards )
@@ -834,7 +861,7 @@ public final class YourGame
             return card.rank == firstRank ;
             }
 
-        // 2. If not a Set, it must be a RUN (Sequence)
+        // If not a Set then it has to be a run
         // Sort existing run to find ends
         cards.sort( ( c1,
                       c2 ) -> Integer.compare( c1.rank.getOrder(), c2.rank.getOrder() ) ) ;
@@ -939,8 +966,7 @@ public final class YourGame
      * @return a card as specified by the user or null if no more input is
      * available or the user requested to exit
      */
-    private Card promptForCard( final String prompt,
-                                final Object... arguments )
+    private Card promptForCard( final String prompt, final Object... arguments )
         {
 
         Suit suit = null ;
