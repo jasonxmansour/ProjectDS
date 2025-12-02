@@ -65,7 +65,7 @@ import java.util.Scanner ;
  * @version 2.0 2025-06-28 track changes to other classes
  * @version 2.1 2025-11-04 track changes to other classes
  *
- * @author Your Name
+ * @author Jason Mansour and Michael Foley
  *
  * @version 3.0 2025-11-03 modifications for your game
  */
@@ -202,8 +202,7 @@ public final class Player
 
         }  // end playACard()
     
-    
-    // --- START NEW RUMMY METHODS ---
+   
 
     /**
      * Get the card at a specific index without removing it.
@@ -307,8 +306,6 @@ public final class Player
         {
         return this.melds;
         }
-
-    // --- END NEW RUMMY METHODS ---
 
 
     /**

@@ -370,7 +370,7 @@ public final class YourGame
 
             }
             
-        // Rummy: Flip top card to discard pile to start
+        // Flip top card to discard pile to start
         try {
             this.discardPile.addCard(this.stock.drawTopCard().reveal());
         } catch (NoCardsException e) {
@@ -479,13 +479,13 @@ public final class YourGame
             {
             Player currentPlayer = players.get(currentPlayerIndex);
             
-            // --- TURN LOGIC ---
+            // Turn logic
             
-            // 1. Display Game State
+            // Display Game State
             System.out.printf("%n--- %s's Turn ---%n", currentPlayer.name);
             displayHandWithIndices(currentPlayer);
 
-            // 2. The draw portion
+            // The draw portion
             Card drawnCard = null;
             boolean validDraw = false;
             
@@ -501,15 +501,20 @@ public final class YourGame
                         if (discardPile.isEmpty()) {
                             System.out.println("Draw game: No cards left.");
                             roundOver = true;
-                            validDraw = true; // Break loop to exit round
+                            validDraw = true; 
                             break;
                         }
+                        // so here we keep the top card of the discard pile
                         Card topDiscard = discardPile.takeTopCard();
-                        stock.moveCardsToBottom(discardPile); // Move rest
+                        // then we have to move all the remaining cards from the discard pile to the stock pile
+                        stock.moveCardsToBottom(discardPile); 
+                        // then here we have to shuffle the stock
                         stock.shuffle();
+                        // put the top card back on card pile
                         discardPile.addCard(topDiscard); // Put top back
                         System.out.println("Stock replenished from discard pile.");
                     }
+                    // now we can draw from the stock because its guaranteed to have some cards in it
                     if (!stock.isEmpty()) {
                         drawnCard = stock.drawTopCard().reveal();
                         validDraw = true;
@@ -550,7 +555,7 @@ public final class YourGame
                 if (meldInput.equalsIgnoreCase("pass") || meldInput.isEmpty()) {
                     melding = false;
                 } 
-                // bug fix: making this so you can actually add to existing meld 
+                // making this so you can actually add to existing meld 
                 else if (meldInput.toLowerCase().startsWith("a")) {
                     try {
                         String[] parts = meldInput.split(" ");
@@ -612,7 +617,7 @@ public final class YourGame
                 }
             }
             
-            // 4. Phase where you can discard 
+            // Phase where you can discard 
             // have to make this so it doesn't end until pass
             if (!currentPlayer.isHandEmpty() && this.running) {
                 displayHandWithIndices(currentPlayer);
@@ -627,7 +632,7 @@ public final class YourGame
                 System.out.println("Discarded " + discarded);
             }
             
-            // 5. final win condition
+            // final win condition
             if (currentPlayer.isHandEmpty()) {
                 System.out.printf("%n%s went out! Round Over.%n", currentPlayer.name);
                 calculateRoundScores(currentPlayer);
@@ -829,8 +834,7 @@ public final class YourGame
      * the target meld
      * @return true if the card fits the meld's rules (Set or Run), false otherwise
      */
-    private boolean canAddToMeld( Card card,
-                                  Meld meld )
+    private boolean canAddToMeld( Card card, Meld meld )
         {
         if ( meld.isEmpty() )
             {
@@ -844,7 +848,7 @@ public final class YourGame
             cards.add( (Card) c ) ;
             }
 
-        // Check if it's a SET which happens if all ranks matches
+        // Check if it's a set which happens if all ranks matches
         boolean isSet = true ;
         Rank firstRank = cards.get( 0 ).rank ;
         for ( Card c : cards )
