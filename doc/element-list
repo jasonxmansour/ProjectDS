@@ -1,0 +1,14 @@
+edu.wit.scds.ds.lists.app.card_game.standard_cards
+edu.wit.scds.ds.lists.app.card_game.standard_cards.card
+edu.wit.scds.ds.lists.app.card_game.standard_cards.pile
+edu.wit.scds.ds.lists.app.card_game.top_this
+edu.wit.scds.ds.lists.app.card_game.top_this.game
+edu.wit.scds.ds.lists.app.card_game.top_this.pile
+edu.wit.scds.ds.lists.app.card_game.universal_base
+edu.wit.scds.ds.lists.app.card_game.universal_base.card
+edu.wit.scds.ds.lists.app.card_game.universal_base.pile
+edu.wit.scds.ds.lists.app.card_game.universal_base.support
+edu.wit.scds.ds.lists.app.card_game.your_game
+edu.wit.scds.ds.lists.app.card_game.your_game.game
+edu.wit.scds.ds.lists.app.card_game.your_game.pile
+education.the_software_toolsmith.tools.validation

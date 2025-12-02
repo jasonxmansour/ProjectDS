@@ -1,0 +1,341 @@
+
+Welcome to Top This!
+
+In this game, players will collect melds and the player with the
+most melds at the end of the game wins.
+
+Respond to any prompt with a period to end the game.
+
+Enjoy!
+
+--------------------
+
+How many players (minimum 3)? 3
+
+What is the name of player 1? Me
+
+What is the name of player 2? Mice Elf
+
+What is the name of player 3? Aye!
+
+How many decks (minimum 1)? 5
+
+How many cards per hand (minimum 1, maximum 86)? 24
+
+How many rounds (minimum 1, maximum 24)? 3
+
+--------------------
+
+To specify a card, type RS (Rank and Suit) then press enter.
+
+If R or S is ?, we'll display the options for Rank or Suit, respectively.
+If your selection is ?, we'll display the options for Rank and Suit.
+
+If R or S is ., the game will end.
+If your selection is ., the game will end.
+
+Have fun!
+
+--------------------
+
+Round 1 of 3
+
+It's Me's turn
+
+Choose a card from [3♦, 3♠, 4♥, 4♥, 4♥, 5♣, 5♥, 5♥, 5♦, 6♦, 7♥, 7♠, 8♣, 8♣, 8♠, 9♣, 9♦, 10♥, 10♠, J♠, Q♥, K♥, K♠, A♦]:  ?
+
+
+To specify a rank, use the abbreviation:
+
+ A -> "A" "Ace"
+ 2 -> "2" "Duece"
+ 3 -> "3" "Three"
+ 4 -> "4" "Four"
+ 5 -> "5" "Five"
+ 6 -> "6" "Six"
+ 7 -> "7" "Seven"
+ 8 -> "8" "Eight"
+ 9 -> "9" "Nine"
+ T -> "10" "Ten"
+ J -> "J" "Jack"
+ Q -> "Q" "Queen"
+ K -> "K" "King"
+ R -> "R" "Joker"
+
+
+
+To specify a suit, use the abbreviation:
+
+S -> "♠" "Spades"
+D -> "♦" "Diamonds"
+H -> "♥" "Hearts"
+C -> "♣" "Clubs"
+N -> "" ""
+
+
+Choose a card from [3♦, 3♠, 4♥, 4♥, 4♥, 5♣, 5♥, 5♥, 5♦, 6♦, 7♥, 7♠, 8♣, 8♣, 8♠, 9♣, 9♦, 10♥, 10♠, J♠, Q♥, K♥, K♠, A♦]:  a?
+
+
+To specify a suit, use the abbreviation:
+
+S -> "♠" "Spades"
+D -> "♦" "Diamonds"
+H -> "♥" "Hearts"
+C -> "♣" "Clubs"
+N -> "" ""
+
+
+Choose a card from [3♦, 3♠, 4♥, 4♥, 4♥, 5♣, 5♥, 5♥, 5♦, 6♦, 7♥, 7♠, 8♣, 8♣, 8♠, 9♣, 9♦, 10♥, 10♠, J♠, Q♥, K♥, K♠, A♦]:  ?d
+
+
+To specify a rank, use the abbreviation:
+
+ A -> "A" "Ace"
+ 2 -> "2" "Duece"
+ 3 -> "3" "Three"
+ 4 -> "4" "Four"
+ 5 -> "5" "Five"
+ 6 -> "6" "Six"
+ 7 -> "7" "Seven"
+ 8 -> "8" "Eight"
+ 9 -> "9" "Nine"
+ T -> "10" "Ten"
+ J -> "J" "Jack"
+ Q -> "Q" "Queen"
+ K -> "K" "King"
+ R -> "R" "Joker"
+
+
+Choose a card from [3♦, 3♠, 4♥, 4♥, 4♥, 5♣, 5♥, 5♥, 5♦, 6♦, 7♥, 7♠, 8♣, 8♣, 8♠, 9♣, 9♦, 10♥, 10♠, J♠, Q♥, K♥, K♠, A♦]:  ad
+
+It's Mice Elf's turn
+
+Choose a card from [2♣, 2♥, 3♠, 4♥, 5♣, 5♥, 6♥, 6♦, 6♦, 6♠, 8♥, 8♦, 10♦, 10♦, J♠, Q♣, Q♥, Q♦, Q♠, Q♠, K♣, K♦, A♥, A♠]:  as
+
+It's Aye!'s turn
+
+Choose a card from [2♦, 2♠, 3♣, 3♣, 4♣, 4♠, 5♦, 5♦, 6♣, 6♣, 7♣, 8♥, 8♠, 9♣, 10♦, 10♠, J♣, J♠, J♠, Q♣, Q♥, A♣, A♣, A♦]:  ad
+
+--------------------
+
+Mice Elf won round 1 with the highest card A♠ of [A♦, A♠, A♦]
+
+At the end of round 1 of 3, the standings are:
+	Me: no melds
+	Mice Elf: 1 meld
+	Aye!: no melds
+
+--------------------
+
+Round 2 of 3
+
+It's Mice Elf's turn
+
+Choose a card from [2♣, 2♥, 3♠, 4♥, 5♣, 5♥, 6♥, 6♦, 6♦, 6♠, 8♥, 8♦, 10♦, 10♦, J♠, Q♣, Q♥, Q♦, Q♠, Q♠, K♣, K♦, A♥]:  ah
+
+It's Aye!'s turn
+
+Choose a card from [2♦, 2♠, 3♣, 3♣, 4♣, 4♠, 5♦, 5♦, 6♣, 6♣, 7♣, 8♥, 8♠, 9♣, 10♦, 10♠, J♣, J♠, J♠, Q♣, Q♥, A♣, A♣]:  ac
+
+It's Me's turn
+
+Choose a card from [3♦, 3♠, 4♥, 4♥, 4♥, 5♣, 5♥, 5♥, 5♦, 6♦, 7♥, 7♠, 8♣, 8♣, 8♠, 9♣, 9♦, 10♥, 10♠, J♠, Q♥, K♥, K♠]:  ks
+
+--------------------
+
+Mice Elf won round 2 with the highest card A♥ of [A♥, A♣, K♠]
+
+At the end of round 2 of 3, the standings are:
+	Me: no melds
+	Mice Elf: 2 melds
+	Aye!: no melds
+
+--------------------
+
+Round 3 of 3
+
+It's Aye!'s turn
+
+Choose a card from [2♦, 2♠, 3♣, 3♣, 4♣, 4♠, 5♦, 5♦, 6♣, 6♣, 7♣, 8♥, 8♠, 9♣, 10♦, 10♠, J♣, J♠, J♠, Q♣, Q♥, A♣]:  ac
+
+It's Me's turn
+
+Choose a card from [3♦, 3♠, 4♥, 4♥, 4♥, 5♣, 5♥, 5♥, 5♦, 6♦, 7♥, 7♠, 8♣, 8♣, 8♠, 9♣, 9♦, 10♥, 10♠, J♠, Q♥, K♥]:  kh
+
+It's Mice Elf's turn
+
+Choose a card from [2♣, 2♥, 3♠, 4♥, 5♣, 5♥, 6♥, 6♦, 6♦, 6♠, 8♥, 8♦, 10♦, 10♦, J♠, Q♣, Q♥, Q♦, Q♠, Q♠, K♣, K♦]:  kd
+
+--------------------
+
+Aye! won round 3 with the highest card A♣ of [A♣, K♥, K♦]
+
+At the end of round 3 of 3, the standings are:
+	Me: no melds
+	Mice Elf: 2 melds
+	Aye!: 1 meld
+
+--------------------
+
+End of game summary
+
+Player: Me
+	hand: [3♦, 3♠, 4♥, 4♥, 4♥, 5♣, 5♥, 5♥, 5♦, 6♦, 7♥, 7♠, 8♣, 8♣, 8♠, 9♣, 9♦, 10♥, 10♠, J♠, Q♥]
+	melds: none
+
+Player: Mice Elf
+	hand: [2♣, 2♥, 3♠, 4♥, 5♣, 5♥, 6♥, 6♦, 6♦, 6♠, 8♥, 8♦, 10♦, 10♦, J♠, Q♣, Q♥, Q♦, Q♠, Q♠, K♣]
+	melds: 
+		[A♦, A♠, A♦]
+		[A♥, A♣, K♠]
+
+Player: Aye!
+	hand: [2♦, 2♠, 3♣, 3♣, 4♣, 4♠, 5♦, 5♦, 6♣, 6♣, 7♣, 8♥, 8♠, 9♣, 10♦, 10♠, J♣, J♠, J♠, Q♣, Q♥]
+	melds: 
+		[A♣, K♥, K♦]
+
+Mice Elf won with 2 melds
+
+--------------------
+
+For visual confirmation, the cards in the discard pile are:
+	[]
+
+and the cards left in the stock are:
+	[7♦, K♦, 6♠, J♣, 3♦, 8♣, J♥, 4♣, 3♥, 6♣, 6♦, 9♥, 8♣, 5♠, 9♣, 2♠, A♥, 4♣, 4♦, 5♣, A♠, 7♠, 5♠, 10♣, J♣, A♠, 4♦, 5♠, J♦, 2♦, J♠, A♥, 10♥, 9♠, 9♠, 4♥, 3♦, 9♥, J♥, K♣, 3♥, 6♣, 7♥, 4♣, 6♠, J♣, K♥, 3♠, J♦, 8♥, 4♦, 2♦, 6♦, 9♣, A♣, A♣, A♦, 2♦, A♥, 5♦, 8♦, 5♠, A♦, Q♦, 5♣, 10♥, 5♣, 2♥, 7♠, Q♣, 2♥, 7♦, 2♥, A♠, 6♠, Q♠, 3♣, 3♥, 9♦, 7♠, Q♥, Q♦, 7♦, Q♣, 3♥, K♣, K♦, J♥, 6♣, 10♠, Q♥, A♦, 2♦, 8♠, J♦, J♦, 7♣, K♦, 5♥, 9♦, K♠, K♠, 2♠, 2♥, 9♠, K♠, 3♠, 2♣, 9♠, 4♠, 10♣, K♣, K♦, J♥, 10♦, 8♠, 2♣, 7♦, 3♣, 2♠, 2♣, K♣, 7♣, A♣, 2♠, Q♣, Q♠, 9♥, J♥, 7♣, 8♣, 5♦, 8♠, 6♥, A♥, 8♥, 6♥, J♦, 6♥, 8♦, 9♠, 9♦, 3♥, 7♥, 3♦, 10♣, 10♥, 2♣, 10♠, 4♠, Q♠, 10♥, 9♦, K♥, 10♦, 7♣, 4♠, 5♠, 3♠, 7♦, J♣, 4♣, 10♣, 7♥, 9♥, 10♠, K♥, 4♦, 4♦, 9♥, 9♣, 7♥, 8♦, 4♠, 8♦, 5♥, Q♦, 8♥, 6♥, 10♣, 3♦, K♥, 3♣, Q♦, K♠, A♠, 6♠, 7♠]
+
+--------------------
+
+Play again? y
+
+--------------------
+
+To specify a card, type RS, (Rank and Suit) then press enter.
+
+If R or S is ?, we'll display the options for Rank or Suit, respectively.
+If your selection is ?, we'll display the options for Rank and Suit.
+
+If R or S is ., the game will end.
+If your selection is ., the game will end.
+
+Have fun!
+
+--------------------
+
+Round 1 of 3
+
+It's Me's turn
+
+Choose a card from [2♠, 4♥, 4♥, 4♠, 6♠, 7♣, 7♣, 7♥, 8♥, 8♦, 8♠, 8♠, 9♠, 10♦, 10♠, J♣, J♥, J♦, Q♥, K♣, K♣, K♠, A♣, A♠]:  kc
+
+It's Mice Elf's turn
+
+Choose a card from [2♣, 2♥, 2♦, 3♣, 3♣, 3♣, 3♥, 3♥, 3♦, 4♥, 4♠, 5♣, 5♦, 5♠, 6♥, 7♥, 7♦, 8♦, 8♦, J♠, Q♠, Q♠, K♣, K♠]:  kc
+
+It's Aye!'s turn
+
+Choose a card from [2♥, 2♦, 2♦, 2♠, 3♦, 4♣, 4♠, 4♠, 5♣, 5♦, 6♣, 6♣, 6♥, 6♦, 6♦, 7♣, 9♦, J♣, J♣, J♦, Q♥, Q♦, Q♠, A♠]:  qs
+
+--------------------
+
+No one won round 1; 2 players, Me and Mice Elf, had the highest card K♣ of [K♣, K♣, Q♠]
+
+At the end of round 1 of 3, the standings are:
+	Me: no melds
+	Mice Elf: no melds
+	Aye!: no melds
+
+--------------------
+
+Round 2 of 3
+
+It's Mice Elf's turn
+
+Choose a card from [2♣, 2♥, 2♦, 3♣, 3♣, 3♣, 3♥, 3♥, 3♦, 4♥, 4♠, 5♣, 5♦, 5♠, 6♥, 7♥, 7♦, 8♦, 8♦, J♠, Q♠, Q♠, K♠]:  js
+
+It's Aye!'s turn
+
+Choose a card from [2♥, 2♦, 2♦, 2♠, 3♦, 4♣, 4♠, 4♠, 5♣, 5♦, 6♣, 6♣, 6♥, 6♦, 6♦, 7♣, 9♦, J♣, J♣, J♦, Q♥, Q♦, A♠]:  qh
+
+It's Me's turn
+
+Choose a card from [2♠, 4♥, 4♥, 4♠, 6♠, 7♣, 7♣, 7♥, 8♥, 8♦, 8♠, 8♠, 9♠, 10♦, 10♠, J♣, J♥, J♦, Q♥, K♣, K♠, A♣, A♠]:  qh
+
+--------------------
+
+No one won round 2; 2 players, Aye! and Me, had the highest card Q♥ of [J♠, Q♥, Q♥]
+
+At the end of round 2 of 3, the standings are:
+	Me: no melds
+	Mice Elf: no melds
+	Aye!: no melds
+
+--------------------
+
+Round 3 of 3
+
+It's Aye!'s turn
+
+Choose a card from [2♥, 2♦, 2♦, 2♠, 3♦, 4♣, 4♠, 4♠, 5♣, 5♦, 6♣, 6♣, 6♥, 6♦, 6♦, 7♣, 9♦, J♣, J♣, J♦, Q♦, A♠]:  jd
+
+It's Me's turn
+
+Choose a card from [2♠, 4♥, 4♥, 4♠, 6♠, 7♣, 7♣, 7♥, 8♥, 8♦, 8♠, 8♠, 9♠, 10♦, 10♠, J♣, J♥, J♦, K♣, K♠, A♣, A♠]:  jd
+
+It's Mice Elf's turn
+
+Choose a card from [2♣, 2♥, 2♦, 3♣, 3♣, 3♣, 3♥, 3♥, 3♦, 4♥, 4♠, 5♣, 5♦, 5♠, 6♥, 7♥, 7♦, 8♦, 8♦, Q♠, Q♠, K♠]:  8d
+
+--------------------
+
+No one won round 3; 2 players, Aye! and Me, had the highest card J♦ of [J♦, J♦, 8♦]
+
+At the end of round 3 of 3, the standings are:
+	Me: no melds
+	Mice Elf: no melds
+	Aye!: no melds
+
+--------------------
+
+End of game summary
+
+Player: Me
+	hand: [2♠, 4♥, 4♥, 4♠, 6♠, 7♣, 7♣, 7♥, 8♥, 8♦, 8♠, 8♠, 9♠, 10♦, 10♠, J♣, J♥, K♣, K♠, A♣, A♠]
+	melds: none
+
+Player: Mice Elf
+	hand: [2♣, 2♥, 2♦, 3♣, 3♣, 3♣, 3♥, 3♥, 3♦, 4♥, 4♠, 5♣, 5♦, 5♠, 6♥, 7♥, 7♦, 8♦, Q♠, Q♠, K♠]
+	melds: none
+
+Player: Aye!
+	hand: [2♥, 2♦, 2♦, 2♠, 3♦, 4♣, 4♠, 4♠, 5♣, 5♦, 6♣, 6♣, 6♥, 6♦, 6♦, 7♣, 9♦, J♣, J♣, Q♦, A♠]
+	melds: none
+
+There was no winner
+
+--------------------
+
+For visual confirmation, the cards in the discard pile are:
+	[J♦, J♦, 8♦, J♠, Q♥, Q♥, K♣, K♣, Q♠]
+
+and the cards left in the stock are:
+	[9♥, 9♣, 2♣, 8♥, A♦, K♠, Q♠, 4♦, K♥, 5♣, 10♥, K♥, 7♣, 8♣, 3♦, 7♠, 6♠, Q♥, K♦, 4♣, 5♥, 2♥, 7♣, 3♠, 10♣, 10♦, J♦, 8♣, 7♥, 10♥, 6♦, A♣, A♣, 10♠, 6♦, 9♠, 8♠, 4♥, J♦, A♣, 10♥, 8♠, 6♥, 5♠, 5♦, K♦, Q♣, 5♣, 7♠, 5♥, A♥, 5♥, 5♥, A♠, Q♠, A♥, Q♦, A♠, 4♣, Q♣, 3♣, 10♦, 2♥, 3♥, 9♣, Q♣, 3♠, 8♥, 5♠, A♦, 9♥, K♠, 5♠, 9♦, 3♠, 2♦, 4♣, 2♣, 8♦, 3♣, 9♥, Q♥, 6♣, 9♠, 9♣, 7♠, Q♦, 2♠, 7♥, J♠, 7♦, 10♠, 7♦, 10♦, 2♣, Q♣, 5♦, 7♥, 6♠, 8♠, 9♠, K♥, Q♥, 6♣, K♦, 2♠, A♥, A♥, 7♦, A♦, 6♠, J♥, 4♥, K♥, 6♣, 10♣, 10♦, 9♣, 8♣, J♠, 8♥, 9♥, 3♦, K♣, 4♠, 3♦, 7♠, K♦, A♠, J♣, J♥, 2♥, 9♦, J♠, J♣, 6♦, Q♦, K♣, 10♥, J♥, 9♦, 10♣, 3♠, 6♥, 7♠, A♦, K♦, 9♦, Q♣, 8♣, 4♦, A♣, J♥, 10♠, 9♥, J♦, 5♠, 6♥, 2♦, 8♣, A♦, 2♠, 3♠, 3♥, 8♥, 10♣, J♠, K♥, 5♦, K♠, 5♥, 4♣, 9♣, 6♠, 4♦, 9♠, 4♦, 4♦, 10♣, 10♥, Q♦, 5♣, 7♦, 3♥, 8♦, A♥, 2♣, 10♠]
+
+--------------------
+
+Play again? n
+
+--------------------
+
+All 260 cards are accounted for.
+
+For visual confirmation, the re-constituted decks are:
+	[R, R, 2♣, 2♥, 2♦, 2♠, 3♣, 3♥, 3♦, 3♠, 4♣, 4♥, 4♦, 4♠, 5♣, 5♥, 5♦, 5♠, 6♣, 6♥, 6♦, 6♠, 7♣, 7♥, 7♦, 7♠, 8♣, 8♥, 8♦, 8♠, 9♣, 9♥, 9♦, 9♠, 10♣, 10♥, 10♦, 10♠, J♣, J♥, J♦, J♠, Q♣, Q♥, Q♦, Q♠, K♣, K♥, K♦, K♠, A♣, A♥, A♦, A♠]
+	[R, R, 2♣, 2♥, 2♦, 2♠, 3♣, 3♥, 3♦, 3♠, 4♣, 4♥, 4♦, 4♠, 5♣, 5♥, 5♦, 5♠, 6♣, 6♥, 6♦, 6♠, 7♣, 7♥, 7♦, 7♠, 8♣, 8♥, 8♦, 8♠, 9♣, 9♥, 9♦, 9♠, 10♣, 10♥, 10♦, 10♠, J♣, J♥, J♦, J♠, Q♣, Q♥, Q♦, Q♠, K♣, K♥, K♦, K♠, A♣, A♥, A♦, A♠]
+	[R, R, 2♣, 2♥, 2♦, 2♠, 3♣, 3♥, 3♦, 3♠, 4♣, 4♥, 4♦, 4♠, 5♣, 5♥, 5♦, 5♠, 6♣, 6♥, 6♦, 6♠, 7♣, 7♥, 7♦, 7♠, 8♣, 8♥, 8♦, 8♠, 9♣, 9♥, 9♦, 9♠, 10♣, 10♥, 10♦, 10♠, J♣, J♥, J♦, J♠, Q♣, Q♥, Q♦, Q♠, K♣, K♥, K♦, K♠, A♣, A♥, A♦, A♠]
+	[R, R, 2♣, 2♥, 2♦, 2♠, 3♣, 3♥, 3♦, 3♠, 4♣, 4♥, 4♦, 4♠, 5♣, 5♥, 5♦, 5♠, 6♣, 6♥, 6♦, 6♠, 7♣, 7♥, 7♦, 7♠, 8♣, 8♥, 8♦, 8♠, 9♣, 9♥, 9♦, 9♠, 10♣, 10♥, 10♦, 10♠, J♣, J♥, J♦, J♠, Q♣, Q♥, Q♦, Q♠, K♣, K♥, K♦, K♠, A♣, A♥, A♦, A♠]
+	[R, R, 2♣, 2♥, 2♦, 2♠, 3♣, 3♥, 3♦, 3♠, 4♣, 4♥, 4♦, 4♠, 5♣, 5♥, 5♦, 5♠, 6♣, 6♥, 6♦, 6♠, 7♣, 7♥, 7♦, 7♠, 8♣, 8♥, 8♦, 8♠, 9♣, 9♥, 9♦, 9♠, 10♣, 10♥, 10♦, 10♠, J♣, J♥, J♦, J♠, Q♣, Q♥, Q♦, Q♠, K♣, K♥, K♦, K♠, A♣, A♥, A♦, A♠]
+
+
+Thank you for playing Top This!
+
